@@ -40,3 +40,13 @@ public Prx.YourClass : Object {
 
 `method` as a C code will be: `prx_yourclass_method`.
 
+Large methods names should use `_` as separators, avoid `CamelCase` syntax, because its against **GObject** method conventions.
+
+```
+public Prx.YourClass : Object {
+    public void method_name () {}
+}
+```
+
+
+
