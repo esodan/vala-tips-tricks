@@ -8,7 +8,7 @@ This chapter will explain you some existing limitations on Vala you should consi
 
 Vala relays on GObject, then its limitations are the ones for Vala too.
 
-## Lambda parameters directions
+# Lambda parameters directions
 
 While you can use a lambda method to attach to an object's signal, you can't use `out` type for a paramenter.
 
