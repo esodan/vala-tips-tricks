@@ -6,4 +6,5 @@
 * [Interfaces](interfaces.md)
 * [Implicit Convertions](implicit-convertions.md)
 * [Object Construction](object-construction.md)
+* [Vala limitations](vala-limitations.md)
 
