@@ -48,5 +48,5 @@ public Prx.YourClass : Object {
 }
 ```
 
-method_name as a C code will be: `prx_your_class_method_name`_.
+`method_name`_as a C code will be: _`prx_your_class_method_name`.
 
