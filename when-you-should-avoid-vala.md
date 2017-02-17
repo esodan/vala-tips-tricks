@@ -22,7 +22,5 @@ Vala generated code is not optimized to be read by humans, still easy to follow 
 
 # GLib Contribution
 
-Consider to write your pice of code in C if you plan to backport to GLib or GObject, because Vala generated code have been designed to be easily produced not readed.
-
-
+Consider to write your pice of code in C if you plan to backport to GLib or GObject, because Vala generated code have been designed to be easily produced not readed. Your code can be easily rejected if you take it from Vala without modification and optimization \(for readeability\).
 
