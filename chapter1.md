@@ -12,7 +12,9 @@ valac just produce valid C code if you follow a [GObject Conventions](https://de
 
 All your classes's name should use `CamelCase` convention. Don't use underscope `_` , they are used to separate methods names.
 
+### Interfaces Names
 
+Use same conventions as instantiable classes, because they at the end are types and classes, but un-instantiable.
 
 ## Namespaces
 
