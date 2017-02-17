@@ -8,15 +8,15 @@ All your generated code will follow [GObject Conventions](https://developer.gnom
 
 valac just produce valid C code if you follow a [GObject Conventions](https://developer.gnome.org/gobject/stable/gtype-conventions.html) and take in account the ones described in this chapter.
 
-## Class Names
+# Class Names
 
 All your classes's name should use `CamelCase` convention. Don't use underscope `_` , they are used to separate methods names.
 
-### Interfaces Names
+## Interfaces Names
 
 Use same conventions as instantiable classes, because they at the end are types and classes, but un-instantiable.
 
-## Namespaces
+# Namespaces
 
 All your classes should be in a namespace both using `namespace` clause or prefixing your class name at declaration time.
 
@@ -28,7 +28,7 @@ In above example, `YourClass` is a class name with a prefix `Prx`. In C it will 
 
 If you generate code without namespaces, is possible to produce invalid C code without notice.
 
-## Class Methods
+# Class Methods
 
 All methods declared as part of a class declaration, are prefixed using lower case name of class and `_` as a separator.
 
