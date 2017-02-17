@@ -32,7 +32,7 @@ In this case, `_index` is set at `GObjectClass` initialization, just one time fo
 
 ## GType and GObjectClass
 
-In order to have a `GObjectClass` initialized before any class is instantiated, you should use \([Bug \#543189](https://bugzilla.gnome.org/show_bug.cgi?id=543189)\): 
+In order to have a `GObjectClass` initialized before any class is instantiated, you should use \([Bug \#543189](https://bugzilla.gnome.org/show_bug.cgi?id=543189)\):
 
 ```
 typeof(MyType).class_ref();
@@ -45,6 +45,26 @@ typeof(MyType).class_ref();
 Once an object is created it is registered in `GObject` type system, allowing you to use `object is YourBaseObject` . If you try to use a type without registration will above sentences will always fail at runtime. Use `typeof(YourBaseObject)` in order to register your type.
 
 This is a problem for libraries, because they couldn't have all your types initialized before its use. Make shure to call an initialization method at each entry point of your library.
+
+# this Variable
+
+`this` variable is only available in instance methods or in construct blocks. In order to initialize a variable with reference to current instance you can use:
+
+```
+class Track : Object {
+  public Evolution evolution = null;
+  construct {
+   evolution = new Evolution(this);
+  }
+}
+class Evolution {
+   private weak Track track;
+   public Evolution(Track track) {
+      this.track = track;
+   }
+}
+ 
+```
 
 
 
