@@ -61,5 +61,9 @@ public class Exm.Letter {
 }
 ```
 
+# var keword
+
+`var` keyword is a short way to declare new variables and should be used on typed declaration: a typed return value from a method, a variable or constant. Typed variables shoud be used in Vala and is recommended, but valid, to declare a variable as `var l = null` this declaration use `gpointer` as variable type, in Vala may have no sense but in C.
+
 
 
