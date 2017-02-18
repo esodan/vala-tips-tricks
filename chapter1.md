@@ -50,3 +50,16 @@ public Prx.YourClass : Object {
 
 `method_name`_as a C code will be: _`prx_your_class_method_name`.
 
+# Class Properties
+
+Class or interface properties should use lowercase names. Long names should use `_` as word separator.
+
+```
+public class Exm.Letter {
+    public string name { get; set; }
+    public int vertical_size { get; set; }
+}
+```
+
+
+
