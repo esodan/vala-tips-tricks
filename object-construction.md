@@ -38,7 +38,7 @@ In order to have a `GObjectClass` initialized before any class is instantiated, 
 typeof(MyType).class_ref();
 ```
 
-`class_ref()` method instructs `GObjectt`type system to initialize its `GObjecClass`.
+`class_ref()` method instructs `GObject`type system to initialize its `GObjecClass`.
 
 ## Type Registration
 
@@ -63,7 +63,32 @@ class Evolution {
       this.track = track;
    }
 }
- 
+```
+
+# Object.new
+
+`g_object_new()` method is used to create instances of GObject classes in C.
+
+In Vala use Object.new, this allows you to:
+
+* Initialize in one go all object properties, saving you a set of lines of code.
+* Create objects of different types with common properties, like the ones implementing an interface
+
+```
+var obj = Object.new (typeof (MyClass), "property1", value1, "property2", value2, ...) as MyClass; 
+```
+
+If you have stored an object type to be used later, like when you use object collection of different types, you can use that to create object instances of required type.
+
+```
+var obj = Object.new (type_object, "property1", value1, ...);
+```
+
+In above example, you can't use obj as if it is of `type_object`, because you can't add code to cast at runtime, you  should know your object type. You may have an abstract parent class with methods implemented in `type_object` classes, you can use in your code to make some common tasks.
+
+```
+var obj = Object.new (type_object, "property1", value1, ...) as ParenClass;
+message (obj.property1);
 ```
 
 
