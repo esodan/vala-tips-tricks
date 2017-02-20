@@ -88,7 +88,7 @@ var t = typeof (BaseObject);
 if (t == typeof (BaseObject)) { /* Do if is same type */ }
 ```
 
-Use instead
+Use instead:
 
 ```
 var t = typeof(BaseObject);
