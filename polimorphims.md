@@ -54,3 +54,19 @@ void main () {
 
 In this example `Derived` class use its index property and avoids any value defined in base class.
 
+# GObject Type System
+
+GObject provides a runtime type system to identify different properties. Because is runtime, you can't assume its value at any time and will change next execution. See [GObject Documentation](https://developer.gnome.org/gobject/stable/gobject-Type-Information.html) to learn more about.
+
+A type should be registered before to use it. By knowing its value you can know if it is fundamental or derived from other, like a subclass or implementing an interface.
+
+## GType and GObjectClass
+
+In order to have a`GObjectClass`initialized before any class is instantiated, you should use \([Bug \#543189](#)\):
+
+```
+typeof(MyType).class_ref();
+```
+
+`class_ref()`method instructs`GObject`type system to initialize its`GObjecClass`.
+

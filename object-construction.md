@@ -30,16 +30,6 @@ In order initialize variables to be used by all your class instances, use `stati
 
 In this case, `_index` is set at `GObjectClass` initialization, just one time for all your each classes instantiation.
 
-## GType and GObjectClass
-
-In order to have a `GObjectClass` initialized before any class is instantiated, you should use \([Bug \#543189](https://bugzilla.gnome.org/show_bug.cgi?id=543189)\):
-
-```
-typeof(MyType).class_ref();
-```
-
-`class_ref()` method instructs `GObject`type system to initialize its `GObjecClass`.
-
 ## Type Registration
 
 Once an object is created it is registered in `GObject` type system, allowing you to use `object is YourBaseObject` . If you try to use a type without registration will above sentences will always fail at runtime. Use `typeof(YourBaseObject)` in order to register your type.
