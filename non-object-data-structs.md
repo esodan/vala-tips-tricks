@@ -28,11 +28,11 @@ public class ClassB : Object {
     return 0;
   }
 }
-
-
 ```
 
 Vala advantage is to register your struct, so you can use in `Object` properties. It provides a set of methods like  copy and destroy, taking care about struct's members type, when possible in order to free or duplicate as necessary.
+
+# 
 
 
 
