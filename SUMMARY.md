@@ -7,5 +7,6 @@
 * [Polimorphims](polimorphims.md)
 * [Implicit Convertions](implicit-convertions.md)
 * [Object Construction](object-construction.md)
+* [Non-Object data structs](non-object-data-structs.md)
 * [Vala limitations](vala-limitations.md)
 
