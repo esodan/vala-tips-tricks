@@ -63,7 +63,7 @@ public class Exm.Letter {
 
 Properties's accessors in C for above methods are `exm_letter_get_name()` and exm\_letter\_get\_vertical\_size\(\), this is why you can't use `type` as a property name; it will be mapped to `exm_letter_get_type()`, according with GObject C coding conventions it should be used to register and return object's type and Vala create one for your class automatically; at the end you'll have two methods of the same name at C compilation time.
 
-# var keword
+# var keyword
 
 `var` keyword is a short way to declare new variables and should be used on typed declaration: a typed return value from a method, a variable or constant. Typed variables shoud be used in Vala and is recommended, but valid, to declare a variable as `var l = null` this declaration use `gpointer` as variable type, in Vala may have no sense but in C.
 
