@@ -60,7 +60,9 @@ GObject provides a runtime type system to identify different properties. Because
 
 A type should be registered before to use it. By knowing its value you can know if it is fundamental or derived from other, like a subclass or implementing an interface.
 
-## GType and GObjectClass
+When you instantiate a class, GObject register it in type system, then you can use it. Abstract classes and interfaces are registered when its `*get_type()` is used.
+
+## Initialize Type without instantiate
 
 In order to have a`GObjectClass`initialized before any class is instantiated, you should use \([Bug \#543189](#)\):
 
