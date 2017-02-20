@@ -32,7 +32,9 @@ public class ClassB : Object {
 
 Vala advantage is to register your struct, so you can use in `Object` properties. It provides a set of methods like  copy and destroy, taking care about struct's members type, when possible in order to free or duplicate as necessary.
 
-# 
+# Arrays
+
+Using arrays as properties requires you to use local variables, like in structs, to add/remove elements, then set to property.
 
 
 
