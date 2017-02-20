@@ -78,3 +78,22 @@ typeof(MyType).class_ref();
 
 `class_ref()`method instructs`GObject`type system to initialize its`GObjecClass`.
 
+# Type comparation
+
+Don't use:
+
+```
+/* Incorrect way */
+var t = typeof (BaseObject);
+if (t == typeof (BaseObject)) { /* Do if is same type */ }
+```
+
+Use instead
+
+```
+var t = typeof(BaseObject);
+if (t.is_a (typeof(BaseObject))) { /* Do if is derived */ }
+```
+
+Above use GObject Type System to check if type is a derived type of `BaseObject`.
+
