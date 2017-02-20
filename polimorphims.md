@@ -58,6 +58,12 @@ In this example `Derived` class use its index property and avoids any value defi
 
 GObject provides a runtime type system to identify different properties. Because is runtime, you can't assume its value at any time and will change next execution. See [GObject Documentation](https://developer.gnome.org/gobject/stable/gobject-Type-Information.html) to learn more about.
 
+## Type Registration
+
+Once an object is created it is registered in `GObject` type system, allowing you to use `object is YourBaseObject` . If you try to use a type without registration will above sentences will always fail at runtime. Use `typeof(YourBaseObject)` in order to register your type.
+
+This is a problem for libraries, because they couldn't have all your types initialized before its use. Make shure to call an initialization method at each entry point of your library.
+
 A type should be registered before to use it. By knowing its value you can know if it is fundamental or derived from other, like a subclass or implementing an interface.
 
 When you instantiate a class, GObject register it in type system, then you can use it. Abstract classes and interfaces are registered when its `*get_type()` is used.
