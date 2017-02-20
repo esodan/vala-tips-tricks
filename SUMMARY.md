@@ -8,6 +8,6 @@
 * [Implicit Convertions](implicit-convertions.md)
 * [Object Construction](object-construction.md)
 * [Non-Object data structs](non-object-data-structs.md)
-* [Vala limitations](vala-limitations.md)
 * [GLib data collections](glib-data-collections.md)
+* [Vala limitations](vala-limitations.md)
 
