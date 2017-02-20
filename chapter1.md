@@ -61,7 +61,7 @@ public class Exm.Letter {
 }
 ```
 
-Properties's accessors in C for above methods are `exm_letter_get_name()` and exm\_letter\_get\_vertical\_size\(\), this is why you can't use `type` as a property name it will be mapped to `exm_letter_get_type()`, according with GObject C coding conventions it should be used to register and return an object type.
+Properties's accessors in C for above methods are `exm_letter_get_name()` and exm\_letter\_get\_vertical\_size\(\), this is why you can't use `type` as a property name; it will be mapped to `exm_letter_get_type()`, according with GObject C coding conventions it should be used to register and return object's type and Vala create one for your class automatically; at the end you'll have two methods of the same name at C compilation time.
 
 # var keword
 
